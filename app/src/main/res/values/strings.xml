@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Viktorina_app</string>
+    <string name="background_description">Background</string>
+    <string name="start">Начать</string>
 </resources>
