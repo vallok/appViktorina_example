@@ -26,6 +26,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".GameLevels"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
