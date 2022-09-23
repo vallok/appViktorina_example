@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Viktorina_app"
         tools:targetApi="31">
         <activity
+            android:name=".Level1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
@@ -29,8 +36,7 @@
         <activity
             android:name=".GameLevels"
             android:exported="true"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

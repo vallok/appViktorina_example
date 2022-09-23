@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -30,6 +31,22 @@ public class GameLevels extends AppCompatActivity {
                 }
             }
         });
+
+        // Button level 1 start
+        TextView textView1 = findViewById(R.id.textView1);
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    Intent intent = new Intent(GameLevels.this, Level1.class);
+                    startActivity(intent);
+                }catch (Exception e){
+                    //empty
+                }
+            }
+        });
+        //button Level 1 end
+
     }
 
     @Override
