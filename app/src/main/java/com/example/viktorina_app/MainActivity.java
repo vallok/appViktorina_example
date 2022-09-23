@@ -8,8 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private long timeBackPressed;
+    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,4 +35,24 @@ public class MainActivity extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
+
+
+    // Start BackEnd clicked
+
+    @Override
+    public void onBackPressed() {
+        if (timeBackPressed + 2000 > System.currentTimeMillis()){
+            toast.cancel();
+            super.onBackPressed();
+            return;
+        }else{
+            toast = Toast.makeText(getBaseContext(), "Кликните еще раз, чтобы выйти", Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+            timeBackPressed = System.currentTimeMillis();
+
+    }
+
+    //End BackEnd clicked
 }
