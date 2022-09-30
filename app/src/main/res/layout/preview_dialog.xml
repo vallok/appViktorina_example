@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
@@ -25,5 +26,33 @@
             android:layout_gravity="end"
             android:gravity="center"
             android:background="@drawable/button_black95_press_white"/>
+        <ImageView
+            android:id="@+id/preview_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:src="@drawable/preview_img_one"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:layout_marginTop="10dp"
+            android:text="@string/level_one"
+            android:textColor="@color/black95"
+            android:textSize="20sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_continue"
+            android:layout_height="0dp"
+            android:minHeight="48dp"
+            android:layout_weight="10"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_black95_press_white"
+            android:text="@string/text_continue"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"/>
     </LinearLayout>
 </LinearLayout>
