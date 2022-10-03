@@ -221,6 +221,7 @@
                     android:layout_weight="1"
                     android:scaleType="centerCrop"
                     android:layout_marginRight="5dp"
+                    android:clickable="true"
                     android:background="@drawable/style_image_levels"
                     android:src="@drawable/image_test"/>
                 <ImageView
@@ -230,6 +231,7 @@
                     android:layout_weight="1"
                     android:scaleType="centerCrop"
                     android:layout_marginRight="5dp"
+                    android:clickable="true"
                     android:background="@drawable/style_image_levels"
                     android:src="@drawable/image_test" />
             </LinearLayout>

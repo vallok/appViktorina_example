@@ -221,6 +221,7 @@
                     android:layout_height="320dp"
                     android:layout_weight="1"
                     android:scaleType="centerInside"
+                    android:clickable="true"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/style_image_levels"
                     android:src="@drawable/image_test"/>
@@ -230,6 +231,7 @@
                     android:layout_height="320dp"
                     android:layout_weight="1"
                     android:scaleType="centerInside"
+                    android:clickable="true"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/style_image_levels"
                     android:src="@drawable/image_test" />

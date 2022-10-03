@@ -7,9 +7,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +26,7 @@ public class Level1 extends AppCompatActivity {
     private int numRight;
     private Random random = new Random();
     private Array array = new Array();
+    public int counter = 0; // counter for true answers
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,9 @@ public class Level1 extends AppCompatActivity {
 
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+        // init animation
+        final Animation a = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
 
         // show the dialog
         dialog = new Dialog(this);
@@ -105,6 +112,25 @@ public class Level1 extends AppCompatActivity {
         }
         image_right.setImageResource(array.images1[numRight]); // set right image
         text_right.setText(array.texts1[numRight]); // set right text
+
+
+        // set on TouchListener for image left
+        image_left.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN){
+                    image_right.setEnabled(false); // block the right image
+                    if (numLeft > numRight) {
+                        image_left.setImageResource(R.drawable.img_true);
+                    }else{
+                        image_left.setImageResource(R.drawable.img_false);
+                    }
+                }else if (motionEvent.getAction() == MotionEvent.ACTION_UP){
+
+                }
+                return true;
+            }
+        });
 
     }
 
