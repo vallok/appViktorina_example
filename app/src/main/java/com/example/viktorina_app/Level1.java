@@ -14,9 +14,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class Level1 extends AppCompatActivity {
 
     private Dialog dialog;
+    private int numLeft;
+    private int numRight;
+    private Random random = new Random();
+    private Array array = new Array();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,9 @@ public class Level1 extends AppCompatActivity {
 
         TextView text_level = findViewById(R.id.levels);
         text_level.setText(R.string.level1);
+
+        final TextView text_left = findViewById(R.id.text_left);
+        final TextView text_right = findViewById(R.id.text_right);
 
         final ImageView image_left = findViewById(R.id.img_left);
         image_left.setClipToOutline(true);
@@ -86,6 +95,17 @@ public class Level1 extends AppCompatActivity {
         });
 
         // Click on Back button - end
+        numLeft = random.nextInt(10); //get left number
+        image_left.setImageResource(array.images1[numLeft]); // set left image
+        text_left.setText(array.texts1[numLeft]);// set left text
+
+        numRight = random.nextInt(10); // generate right number
+        while(numLeft == numRight){ // start loop with precondition
+            numRight = random.nextInt(10); // generate right number
+        }
+        image_right.setImageResource(array.images1[numRight]); // set right image
+        text_right.setText(array.texts1[numRight]); // set right text
+
     }
 
     @Override

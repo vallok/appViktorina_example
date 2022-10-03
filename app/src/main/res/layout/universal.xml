@@ -220,7 +220,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
                     android:layout_weight="1"
-                    android:scaleType="centerCrop"
+                    android:scaleType="centerInside"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/style_image_levels"
                     android:src="@drawable/image_test"/>
@@ -229,7 +229,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
                     android:layout_weight="1"
-                    android:scaleType="centerCrop"
+                    android:scaleType="centerInside"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/style_image_levels"
                     android:src="@drawable/image_test" />
