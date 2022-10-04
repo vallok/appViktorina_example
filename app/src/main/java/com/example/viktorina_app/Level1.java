@@ -24,8 +24,8 @@ public class Level1 extends AppCompatActivity {
     private Dialog dialog;
     private int numLeft;
     private int numRight;
-    private Random random = new Random();
-    private Array array = new Array();
+    private final Random random = new Random();
+    private final Array array = new Array();
     public int counter = 0; // counter for true answers
 
     @Override
@@ -44,6 +44,13 @@ public class Level1 extends AppCompatActivity {
 
         final ImageView image_right = findViewById(R.id.img_right);
         image_right.setClipToOutline(true);
+
+        final int[] progress = {
+                R.id.point1, R.id.point2, R.id.point3, R.id.point4,  R.id.point5,
+                R.id.point6, R.id.point7, R.id.point8, R.id.point9, R.id.point10,
+                R.id.point11, R.id.point12, R.id.point13, R.id.point14, R.id.point15,
+                R.id.point16, R.id.point17, R.id.point18, R.id.point19, R.id.point20
+        };
 
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -126,12 +133,29 @@ public class Level1 extends AppCompatActivity {
                         image_left.setImageResource(R.drawable.img_false);
                     }
                 }else if (motionEvent.getAction() == MotionEvent.ACTION_UP){
+                    if (numLeft > numRight){
+                        if (counter < 20) {
+                            counter = counter + 1;
+                        }
 
+                        for (int i = 0; i < 20; i++){
+                            TextView textView = findViewById(progress[i]);
+                            textView.setBackgroundResource(R.drawable.style_points);
+                        }
+
+                        for (int i = 0; i < counter; i++){
+                            TextView textView = findViewById(progress[i]);
+                            textView.setBackgroundResource(R.drawable.style_points_green);
+                        }
+
+
+                    }else{
+
+                    }
                 }
                 return true;
             }
         });
-
     }
 
     @Override
