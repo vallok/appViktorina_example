@@ -150,8 +150,44 @@ public class Level1 extends AppCompatActivity {
 
 
                     }else{
+                        if (counter > 0){
+                            if (counter == 1){
+                                counter = 0;
+                            }else{
+                                counter = counter - 2;
+                            }
+                        }
 
+                        for (int i = 0; i < 19; i++){
+                            TextView textView = findViewById(progress[i]);
+                            textView.setBackgroundResource(R.drawable.style_points);
+                        }
+
+                        for (int i = 0; i < counter; i++){
+                            TextView textView = findViewById(progress[i]);
+                            textView.setBackgroundResource(R.drawable.style_points_green);
+                        }
                     }
+
+                    if (counter == 20){
+                        // EXIT FROM LEVEL 1
+                    }else{
+                        numLeft = random.nextInt(10); //get left number
+                        image_left.setImageResource(array.images1[numLeft]); // set left image
+                        image_left.startAnimation(a);
+                        text_left.setText(array.texts1[numLeft]);// set left text
+
+                        numRight = random.nextInt(10); // generate right number
+                        while(numLeft == numRight){ // start loop with precondition
+                            numRight = random.nextInt(10); // generate right number
+                        }
+                        image_right.setImageResource(array.images1[numRight]); // set right image
+                        image_right.startAnimation(a);
+                        text_right.setText(array.texts1[numRight]); // set right text
+
+                        image_right.setEnabled(true);
+                    }
+
                 }
                 return true;
             }
