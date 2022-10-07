@@ -22,29 +22,28 @@
             android:id="@+id/button_close"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:text="&#60;"
+            android:text="X"
             android:textStyle="bold"
-            android:layout_gravity="start"
+            android:layout_gravity="end"
             android:gravity="center"
             android:clickable="true"
             android:background="@drawable/button_black95_press_white"/>
 
-        <ImageView
-            android:id="@+id/preview_img"
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="60"
-            android:src="@drawable/preview_img_one"
-            android:layout_marginTop="10dp"/>
-        <TextView
-            android:id="@+id/text_description"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="30"
             android:layout_marginTop="10dp"
-            android:text="@string/level_one"
-            android:textColor="@color/black95"
-            android:textSize="20sp"/>
+            android:layout_weight="90">
+
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/level_one_end"
+                android:textColor="@color/black95"
+                android:textSize="20sp" />
+        </ScrollView>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
