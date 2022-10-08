@@ -1,8 +1,5 @@
 package com.example.viktorina_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -18,12 +15,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
 
-public class Level1 extends AppCompatActivity {
+public class Level2 extends AppCompatActivity {
 
     private Dialog dialog;
-    private Dialog dialogEnd;
     private int numLeft;
     private int numRight;
     private final Random random = new Random();
@@ -58,15 +56,13 @@ public class Level1 extends AppCompatActivity {
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         // init animation
-        final Animation a = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
 
         // show the dialog
         dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide the title
         dialog.setContentView(R.layout.preview_dialog); // set view of the dialog
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // set transparent background
-        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT);
         dialog.setCancelable(false);
         //начало обработки нажатия кнопок диалога
         TextView button_close = dialog.findViewById(R.id.button_close);
@@ -75,7 +71,7 @@ public class Level1 extends AppCompatActivity {
             public void onClick(View view) {
 //                обработка нажатия кнопки закрытия диалога Начало
                 try{
-                    Intent intent = new Intent(Level1.this, GameLevels.class);// создаем наеменение
+                    Intent intent = new Intent(Level2.this, GameLevels.class);// создаем наеменение
                     startActivity(intent);// запускаем намерение
                     finish(); //закрываем окноп с уровнем
 
@@ -97,60 +93,13 @@ public class Level1 extends AppCompatActivity {
         //конец обрботки нажатия кнопок диалога
         dialog.show();
 
-        // ______________________________________
-
-        // show the dialog
-        dialogEnd = new Dialog(this);
-        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide the title
-        dialogEnd.setContentView(R.layout.preview_dialog); // set view of the dialog
-        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // set transparent background
-        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT);
-        dialogEnd.setCancelable(false);
-        //начало обработки нажатия кнопок диалога
-        TextView button_close2 = dialogEnd.findViewById(R.id.button_close);
-        button_close2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                обработка нажатия кнопки закрытия диалога Начало
-                try{
-                    Intent intent = new Intent(Level1.this, GameLevels.class);// создаем наеменение
-                    startActivity(intent);// запускаем намерение
-                    finish(); //закрываем окноп с уровнем
-
-                }catch (Exception e){
-
-                }
-                dialogEnd.dismiss(); // закрываем диалог
-//                обработка нажатия кнопки закрития диалога конец
-            }
-        });
-
-        Button button_continue2 = dialogEnd.findViewById(R.id.button_continue);
-        button_continue2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try{
-                    Intent intent = new Intent(Level1.this, Level2.class);
-                    startActivity(intent);
-                    finish();
-                }catch (Exception e){
-                    // nothing to do
-                }
-                dialogEnd.dismiss(); // close dialog
-            }
-        });
-
-
-        // ____________________________________
-
         // Click on Back button - start
         Button button_back = findViewById(R.id.button_back);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(Level1.this, GameLevels.class);
+                    Intent intent = new Intent(Level2.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -222,7 +171,6 @@ public class Level1 extends AppCompatActivity {
 
                     if (counter == 20){
                         // EXIT FROM LEVEL 1
-                        dialogEnd.show(); // закрываем диалог
                     }else{
                         numLeft = random.nextInt(10); //get left number
                         image_left.setImageResource(array.images1[numLeft]); // set left image
@@ -296,7 +244,6 @@ public class Level1 extends AppCompatActivity {
 
                     if (counter == 20){
                         // EXIT FROM LEVEL 1
-                        dialogEnd.show(); // закрываем диалог
                     }else{
                         numLeft = random.nextInt(10); //get left number
                         image_left.setImageResource(array.images1[numLeft]); // set left image
@@ -323,7 +270,7 @@ public class Level1 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level1.this, GameLevels.class);
+            Intent intent = new Intent(Level2.this, GameLevels.class);
             startActivity(intent);
             finish();
         }catch (Exception e){
