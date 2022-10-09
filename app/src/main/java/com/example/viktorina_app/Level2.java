@@ -63,7 +63,15 @@ public class Level2 extends AppCompatActivity {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide the title
         dialog.setContentView(R.layout.preview_dialog); // set view of the dialog
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // set transparent background
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT); // set transparent background
         dialog.setCancelable(false);
+        ImageView previewImage = dialog.findViewById(R.id.preview_img);
+        previewImage.setImageResource(R.drawable.preview_img_two);
+
+        TextView description = dialog.findViewById(R.id.text_description);
+        description.setText(R.string.level_two);
+
         //начало обработки нажатия кнопок диалога
         TextView button_close = dialog.findViewById(R.id.button_close);
         button_close.setOnClickListener(new View.OnClickListener() {
