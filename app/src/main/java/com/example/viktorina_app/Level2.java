@@ -118,15 +118,15 @@ public class Level2 extends AppCompatActivity {
 
         // Click on Back button - end
         numLeft = random.nextInt(10); //get left number
-        image_left.setImageResource(array.images1[numLeft]); // set left image
-        text_left.setText(array.texts1[numLeft]);// set left text
+        image_left.setImageResource(array.images2[numLeft]); // set left image
+        text_left.setText(array.texts2[numLeft]);// set left text
 
         numRight = random.nextInt(10); // generate right number
         while(numLeft == numRight){ // start loop with precondition
             numRight = random.nextInt(10); // generate right number
         }
-        image_right.setImageResource(array.images1[numRight]); // set right image
-        text_right.setText(array.texts1[numRight]); // set right text
+        image_right.setImageResource(array.images2[numRight]); // set right image
+        text_right.setText(array.texts2[numRight]); // set right text
 
 
         // set on TouchListener for image left
@@ -181,17 +181,17 @@ public class Level2 extends AppCompatActivity {
                         // EXIT FROM LEVEL 1
                     }else{
                         numLeft = random.nextInt(10); //get left number
-                        image_left.setImageResource(array.images1[numLeft]); // set left image
+                        image_left.setImageResource(array.images2[numLeft]); // set left image
                         image_left.startAnimation(a);
-                        text_left.setText(array.texts1[numLeft]);// set left text
+                        text_left.setText(array.texts2[numLeft]);// set left text
 
                         numRight = random.nextInt(10); // generate right number
                         while(numLeft == numRight){ // start loop with precondition
                             numRight = random.nextInt(10); // generate right number
                         }
-                        image_right.setImageResource(array.images1[numRight]); // set right image
+                        image_right.setImageResource(array.images2[numRight]); // set right image
                         image_right.startAnimation(a);
-                        text_right.setText(array.texts1[numRight]); // set right text
+                        text_right.setText(array.texts2[numRight]); // set right text
 
                         image_right.setEnabled(true);
                     }
@@ -254,17 +254,17 @@ public class Level2 extends AppCompatActivity {
                         // EXIT FROM LEVEL 1
                     }else{
                         numLeft = random.nextInt(10); //get left number
-                        image_left.setImageResource(array.images1[numLeft]); // set left image
+                        image_left.setImageResource(array.images2[numLeft]); // set left image
                         image_left.startAnimation(a);
-                        text_left.setText(array.texts1[numLeft]);// set left text
+                        text_left.setText(array.texts2[numLeft]);// set left text
 
                         numRight = random.nextInt(10); // generate right number
                         while(numLeft == numRight){ // start loop with precondition
                             numRight = random.nextInt(10); // generate right number
                         }
-                        image_right.setImageResource(array.images1[numRight]); // set right image
+                        image_right.setImageResource(array.images2[numRight]); // set right image
                         image_right.startAnimation(a);
-                        text_right.setText(array.texts1[numRight]); // set right text
+                        text_right.setText(array.texts2[numRight]); // set right text
 
                         image_left.setEnabled(true);
                     }
