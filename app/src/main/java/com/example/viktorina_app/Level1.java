@@ -102,7 +102,7 @@ public class Level1 extends AppCompatActivity {
         // show the dialog
         dialogEnd = new Dialog(this);
         dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide the title
-        dialogEnd.setContentView(R.layout.preview_dialog); // set view of the dialog
+        dialogEnd.setContentView(R.layout.dialog_level_one_end); // set view of the dialog
         dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // set transparent background
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);

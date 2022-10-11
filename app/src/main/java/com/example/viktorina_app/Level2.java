@@ -22,6 +22,7 @@ import java.util.Random;
 public class Level2 extends AppCompatActivity {
 
     private Dialog dialog;
+    private Dialog dialogEnd;
     private int numLeft;
     private int numRight;
     private final Random random = new Random();
@@ -101,6 +102,55 @@ public class Level2 extends AppCompatActivity {
         //конец обрботки нажатия кнопок диалога
         dialog.show();
 
+        // ______________________________________
+
+        // show the dialog
+        dialogEnd = new Dialog(this);
+        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); // hide the title
+        dialogEnd.setContentView(R.layout.dialog_level_one_end); // set view of the dialog
+        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // set transparent background
+        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
+        dialogEnd.setCancelable(false);
+        //начало обработки нажатия кнопок диалога
+        TextView button_close2 = dialogEnd.findViewById(R.id.button_close);
+        button_close2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                обработка нажатия кнопки закрытия диалога Начало
+                try{
+                    Intent intent = new Intent(Level2.this, GameLevels.class);// создаем наеменение
+                    startActivity(intent);// запускаем намерение
+                    finish(); //закрываем окноп с уровнем
+
+                }catch (Exception e){
+
+                }
+                dialogEnd.dismiss(); // закрываем диалог
+//                обработка нажатия кнопки закрития диалога конец
+            }
+        });
+
+        Button button_continue2 = dialogEnd.findViewById(R.id.button_continue);
+        button_continue2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    Intent intent = new Intent(Level2.this, Level2.class);
+                    startActivity(intent);
+                    finish();
+                }catch (Exception e){
+                    // nothing to do
+                }
+                dialogEnd.dismiss(); // close dialog
+            }
+        });
+
+        TextView textDescriptionEnd = dialogEnd.findViewById(R.id.text_description);
+        textDescriptionEnd.setText(R.string.level_two_end);
+        // ____________________________________
+
+
         // Click on Back button - start
         Button button_back = findViewById(R.id.button_back);
         button_back.setOnClickListener(new View.OnClickListener() {
@@ -178,7 +228,8 @@ public class Level2 extends AppCompatActivity {
                     }
 
                     if (counter == 20){
-                        // EXIT FROM LEVEL 1
+                        // EXIT FROM LEVEL 2
+                        dialogEnd.show();
                     }else{
                         numLeft = random.nextInt(10); //get left number
                         image_left.setImageResource(array.images2[numLeft]); // set left image
@@ -251,7 +302,8 @@ public class Level2 extends AppCompatActivity {
                     }
 
                     if (counter == 20){
-                        // EXIT FROM LEVEL 1
+                        // EXIT FROM LEVEL 2
+                        dialogEnd.show();
                     }else{
                         numLeft = random.nextInt(10); //get left number
                         image_left.setImageResource(array.images2[numLeft]); // set left image
