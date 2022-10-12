@@ -62,6 +62,21 @@ public class GameLevels extends AppCompatActivity {
         });
         //button Level 2 end
 
+        // Button level 3 start
+        TextView textView3 = findViewById(R.id.textView3);
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    Intent intent = new Intent(GameLevels.this, Level3.class);
+                    startActivity(intent);
+                }catch (Exception e){
+                    //empty
+                }
+            }
+        });
+        //button Level 3 end
+
     }
 
     @Override

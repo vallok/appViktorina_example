@@ -13,13 +13,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level2 extends AppCompatActivity {
+public class Level3 extends AppCompatActivity {
 
     private Dialog dialog;
     private Dialog dialogEnd;
@@ -57,7 +58,7 @@ public class Level2 extends AppCompatActivity {
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         // init animation
-        final Animation a = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
 
         // show the dialog
         dialog = new Dialog(this);
@@ -68,10 +69,13 @@ public class Level2 extends AppCompatActivity {
                 WindowManager.LayoutParams.MATCH_PARENT); // set transparent background
         dialog.setCancelable(false);
         ImageView previewImage = dialog.findViewById(R.id.preview_img);
-        previewImage.setImageResource(R.drawable.preview_img_two);
+        previewImage.setImageResource(R.drawable.preview_img3);
+
+        LinearLayout layout = dialog.findViewById(R.id.dialog_fon);
+        layout.setBackgroundResource(R.drawable.dialog_bg3);
 
         TextView description = dialog.findViewById(R.id.text_description);
-        description.setText(R.string.level_two);
+        description.setText(R.string.level_three);
 
         //начало обработки нажатия кнопок диалога
         TextView button_close = dialog.findViewById(R.id.button_close);
@@ -80,7 +84,7 @@ public class Level2 extends AppCompatActivity {
             public void onClick(View view) {
 //                обработка нажатия кнопки закрытия диалога Начало
                 try{
-                    Intent intent = new Intent(Level2.this, GameLevels.class);// создаем наеменение
+                    Intent intent = new Intent(Level3.this, GameLevels.class);// создаем наеменение
                     startActivity(intent);// запускаем намерение
                     finish(); //закрываем окноп с уровнем
 
@@ -119,7 +123,7 @@ public class Level2 extends AppCompatActivity {
             public void onClick(View view) {
 //                обработка нажатия кнопки закрытия диалога Начало
                 try{
-                    Intent intent = new Intent(Level2.this, GameLevels.class);// создаем наеменение
+                    Intent intent = new Intent(Level3.this, GameLevels.class);// создаем наеменение
                     startActivity(intent);// запускаем намерение
                     finish(); //закрываем окноп с уровнем
 
@@ -136,7 +140,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    Intent intent = new Intent(Level2.this, Level3.class);
+                    Intent intent = new Intent(Level3.this, Level3.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -157,7 +161,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level3.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -330,7 +334,7 @@ public class Level2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level2.this, GameLevels.class);
+            Intent intent = new Intent(Level3.this, GameLevels.class);
             startActivity(intent);
             finish();
         }catch (Exception e){
