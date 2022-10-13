@@ -61,4 +61,26 @@ public class Array {
     };
     //for level2 ends
 
+    //for level3 starts
+    final int[] images3 = {
+            R.drawable.three_level_1, R.drawable.three_level_2, R.drawable.three_level_3,
+            R.drawable.three_level_4, R.drawable.three_level_5, R.drawable.three_level_6,
+            R.drawable.three_level_7, R.drawable.three_level_8, R.drawable.three_level_9,
+            R.drawable.three_level_10, R.drawable.three_level_11, R.drawable.three_level_12,
+            R.drawable.three_level_13, R.drawable.three_level_14, R.drawable.three_level_15,
+            R.drawable.three_level_16, R.drawable.three_level_17, R.drawable.three_level_18,
+            R.drawable.three_level_19, R.drawable.three_level_20, R.drawable.three_level_21
+    };
+
+
+    final int[] texts3 = {
+        R.string.lvl3_1_coala, R.string.lvl3_2_cat, R.string.lvl3_3_pig, R.string.lvl3_4_antilopa,
+            R.string.lvl3_5_monkey, R.string.lvl3_6_funny_rabbit, R.string.lvl3_6_funny_rabbit,
+            R.string.lvl3_8_ej, R.string.lvl3_9_fox, R.string.lvl3_10_lion, R.string.lvl3_11_ris,
+            R.string.lvl3_12_girafe, R.string.lvl3_13_funny_cat, R.string.lvl3_14_pantera, R.string.lvl3_15_funny_dog,
+            R.string.lvl3_16_tiger, R.string.lvl3_17_wolf, R.string.lvl3_18_begemot, R.string.lvl3_19_cow,
+            R.string.lvl3_20_bear, R.string.lvl3_21_staf
+    };
+    //for level3 ends
+
 }

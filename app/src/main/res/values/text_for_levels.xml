@@ -21,4 +21,26 @@
     <string name="lvl2_eight">VIII</string>
     <string name="lvl2_nine">IX</string>
     <string name="lvl2_ten">X</string>
+
+    <string name="lvl3_1_coala">Коала</string>
+    <string name="lvl3_2_cat">Кошка</string>
+    <string name="lvl3_3_pig">Свинка</string>
+    <string name="lvl3_4_antilopa">Антилопа</string>
+    <string name="lvl3_5_monkey">Обезьяна</string>
+    <string name="lvl3_6_funny_rabbit">Смешной кроли</string>
+    <string name="lvl3_7_rabbit">Кролик</string>
+    <string name="lvl3_8_ej">Еж</string>
+    <string name="lvl3_9_fox">Лиса</string>
+    <string name="lvl3_10_lion">Лев</string>
+    <string name="lvl3_11_ris">Рысь</string>
+    <string name="lvl3_12_girafe">Жираф</string>
+    <string name="lvl3_13_funny_cat">Смешная кошка</string>
+    <string name="lvl3_14_pantera">Пантера</string>
+    <string name="lvl3_15_funny_dog">Смешная собака</string>
+    <string name="lvl3_16_tiger">Тигр</string>
+    <string name="lvl3_17_wolf">Волк</string>
+    <string name="lvl3_18_begemot">Бегемот</string>
+    <string name="lvl3_19_cow">Теленок</string>
+    <string name="lvl3_20_bear">Медведь</string>
+    <string name="lvl3_21_staf">Терьер</string>
 </resources>

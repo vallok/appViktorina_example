@@ -35,8 +35,12 @@ public class Level3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
+        ImageView bg = findViewById(R.id.imageView2);
+        bg.setImageResource(R.drawable.level3);
+
+
         TextView text_level = findViewById(R.id.levels);
-        text_level.setText(R.string.level1);
+        text_level.setText(R.string.level3);
 
         final TextView text_left = findViewById(R.id.text_left);
         final TextView text_right = findViewById(R.id.text_right);
@@ -171,16 +175,16 @@ public class Level3 extends AppCompatActivity {
         });
 
         // Click on Back button - end
-        numLeft = random.nextInt(10); //get left number
-        image_left.setImageResource(array.images2[numLeft]); // set left image
-        text_left.setText(array.texts2[numLeft]);// set left text
+        numLeft = random.nextInt(21); //get left number
+        image_left.setImageResource(array.images3[numLeft]); // set left image
+        text_left.setText(array.texts3[numLeft]);// set left text
 
-        numRight = random.nextInt(10); // generate right number
+        numRight = random.nextInt(21); // generate right number
         while(numLeft == numRight){ // start loop with precondition
-            numRight = random.nextInt(10); // generate right number
+            numRight = random.nextInt(21); // generate right number
         }
-        image_right.setImageResource(array.images2[numRight]); // set right image
-        text_right.setText(array.texts2[numRight]); // set right text
+        image_right.setImageResource(array.images3[numRight]); // set right image
+        text_right.setText(array.texts3[numRight]); // set right text
 
 
         // set on TouchListener for image left
@@ -235,18 +239,18 @@ public class Level3 extends AppCompatActivity {
                         // EXIT FROM LEVEL 2
                         dialogEnd.show();
                     }else{
-                        numLeft = random.nextInt(10); //get left number
-                        image_left.setImageResource(array.images2[numLeft]); // set left image
+                        numLeft = random.nextInt(21); //get left number
+                        image_left.setImageResource(array.images3[numLeft]); // set left image
                         image_left.startAnimation(a);
-                        text_left.setText(array.texts2[numLeft]);// set left text
+                        text_left.setText(array.texts3[numLeft]);// set left text
 
-                        numRight = random.nextInt(10); // generate right number
+                        numRight = random.nextInt(21); // generate right number
                         while(numLeft == numRight){ // start loop with precondition
-                            numRight = random.nextInt(10); // generate right number
+                            numRight = random.nextInt(21); // generate right number
                         }
-                        image_right.setImageResource(array.images2[numRight]); // set right image
+                        image_right.setImageResource(array.images3[numRight]); // set right image
                         image_right.startAnimation(a);
-                        text_right.setText(array.texts2[numRight]); // set right text
+                        text_right.setText(array.texts3[numRight]); // set right text
 
                         image_right.setEnabled(true);
                     }
@@ -309,18 +313,18 @@ public class Level3 extends AppCompatActivity {
                         // EXIT FROM LEVEL 2
                         dialogEnd.show();
                     }else{
-                        numLeft = random.nextInt(10); //get left number
-                        image_left.setImageResource(array.images2[numLeft]); // set left image
+                        numLeft = random.nextInt(21); //get left number
+                        image_left.setImageResource(array.images3[numLeft]); // set left image
                         image_left.startAnimation(a);
-                        text_left.setText(array.texts2[numLeft]);// set left text
+                        text_left.setText(array.texts3[numLeft]);// set left text
 
-                        numRight = random.nextInt(10); // generate right number
+                        numRight = random.nextInt(21); // generate right number
                         while(numLeft == numRight){ // start loop with precondition
-                            numRight = random.nextInt(10); // generate right number
+                            numRight = random.nextInt(21); // generate right number
                         }
-                        image_right.setImageResource(array.images2[numRight]); // set right image
+                        image_right.setImageResource(array.images3[numRight]); // set right image
                         image_right.startAnimation(a);
-                        text_right.setText(array.texts2[numRight]); // set right text
+                        text_right.setText(array.texts3[numRight]); // set right text
 
                         image_left.setEnabled(true);
                     }
