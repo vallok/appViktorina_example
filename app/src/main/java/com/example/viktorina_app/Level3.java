@@ -1,5 +1,6 @@
 package com.example.viktorina_app;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -30,6 +31,7 @@ public class Level3 extends AppCompatActivity {
     private final Array array = new Array();
     public int counter = 0; // counter for true answers
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,10 +42,13 @@ public class Level3 extends AppCompatActivity {
 
 
         TextView text_level = findViewById(R.id.levels);
+        text_level.setTextColor(R.color.black95);
         text_level.setText(R.string.level3);
 
         final TextView text_left = findViewById(R.id.text_left);
+        text_left.setTextColor(R.color.black95);
         final TextView text_right = findViewById(R.id.text_right);
+        text_right.setTextColor(R.color.black95);
 
         final ImageView image_left = findViewById(R.id.img_left);
         image_left.setClipToOutline(true);
@@ -161,6 +166,8 @@ public class Level3 extends AppCompatActivity {
 
         // Click on Back button - start
         Button button_back = findViewById(R.id.button_back);
+        button_back.setBackgroundResource(R.drawable.button_black95_press_white);
+        button_back.setTextColor(R.color.black95);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

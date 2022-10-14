@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (timeBackPressed + 2000 > System.currentTimeMillis()){
             toast.cancel();
-            super.onBackPressed();
+            finish();
         }else{
             toast = Toast.makeText(getBaseContext(), "Кликните еще раз, чтобы выйти", Toast.LENGTH_LONG);
             toast.show();
