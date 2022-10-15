@@ -21,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level3 extends AppCompatActivity {
+public class Level4 extends AppCompatActivity {
 
     private Dialog dialog;
     private Dialog dialogEnd;
@@ -67,7 +67,7 @@ public class Level3 extends AppCompatActivity {
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         // init animation
-        final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
 
         // show the dialog
         dialog = new Dialog(this);
@@ -93,7 +93,7 @@ public class Level3 extends AppCompatActivity {
             public void onClick(View view) {
 //                обработка нажатия кнопки закрытия диалога Начало
                 try{
-                    Intent intent = new Intent(Level3.this, GameLevels.class);// создаем наеменение
+                    Intent intent = new Intent(Level4.this, GameLevels.class);// создаем наеменение
                     startActivity(intent);// запускаем намерение
                     finish(); //закрываем окноп с уровнем
 
@@ -126,8 +126,8 @@ public class Level3 extends AppCompatActivity {
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false);
         //Изменение фоновой картинки диалога начало
-        LinearLayout layout1 = dialogEnd.findViewById(R.id.dialog_fon);
-        layout1.setBackgroundResource(R.drawable.dialog_bg3);
+        LinearLayout layout1 = dialog.findViewById(R.id.dialog_fon);
+        layout.setBackgroundResource(R.drawable.dialog_bg3);
         //Изменение фоновой картинки диалога конец
         //начало обработки нажатия кнопок диалога
         TextView button_close2 = dialogEnd.findViewById(R.id.button_close);
@@ -136,7 +136,7 @@ public class Level3 extends AppCompatActivity {
             public void onClick(View view) {
 //                обработка нажатия кнопки закрытия диалога Начало
                 try{
-                    Intent intent = new Intent(Level3.this, GameLevels.class);// создаем наеменение
+                    Intent intent = new Intent(Level4.this, GameLevels.class);// создаем наеменение
                     startActivity(intent);// запускаем намерение
                     finish(); //закрываем окноп с уровнем
 
@@ -153,7 +153,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    Intent intent = new Intent(Level3.this, Level4.class);
+                    Intent intent = new Intent(Level4.this, Level4.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -164,7 +164,7 @@ public class Level3 extends AppCompatActivity {
         });
 
         TextView textDescriptionEnd = dialogEnd.findViewById(R.id.text_description);
-        textDescriptionEnd.setText(R.string.level_three_end);
+        textDescriptionEnd.setText(R.string.level_two_end);
         // ____________________________________
 
 
@@ -176,7 +176,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -349,7 +349,7 @@ public class Level3 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level3.this, GameLevels.class);
+            Intent intent = new Intent(Level4.this, GameLevels.class);
             startActivity(intent);
             finish();
         }catch (Exception e){
