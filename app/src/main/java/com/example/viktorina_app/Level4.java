@@ -38,12 +38,12 @@ public class Level4 extends AppCompatActivity {
         setContentView(R.layout.universal);
 
         ImageView bg = findViewById(R.id.imageView2);
-        bg.setImageResource(R.drawable.level3);
+        bg.setImageResource(R.drawable.level_4);
 
 
         TextView text_level = findViewById(R.id.levels);
         text_level.setTextColor(R.color.black95);
-        text_level.setText(R.string.level3);
+        text_level.setText(R.string.level4);
 
         final TextView text_left = findViewById(R.id.text_left);
         text_left.setTextColor(R.color.black95);
@@ -78,13 +78,13 @@ public class Level4 extends AppCompatActivity {
                 WindowManager.LayoutParams.MATCH_PARENT); // set transparent background
         dialog.setCancelable(false);
         ImageView previewImage = dialog.findViewById(R.id.preview_img);
-        previewImage.setImageResource(R.drawable.preview_img3);
+        previewImage.setImageResource(R.drawable.preview_img4);
 
         LinearLayout layout = dialog.findViewById(R.id.dialog_fon);
-        layout.setBackgroundResource(R.drawable.dialog_bg3);
+        layout.setBackgroundResource(R.drawable.dialog_bg4);
 
         TextView description = dialog.findViewById(R.id.text_description);
-        description.setText(R.string.level_three);
+        description.setText(R.string.level_four);
 
         //начало обработки нажатия кнопок диалога
         TextView button_close = dialog.findViewById(R.id.button_close);
@@ -127,7 +127,7 @@ public class Level4 extends AppCompatActivity {
         dialogEnd.setCancelable(false);
         //Изменение фоновой картинки диалога начало
         LinearLayout layout1 = dialog.findViewById(R.id.dialog_fon);
-        layout.setBackgroundResource(R.drawable.dialog_bg3);
+        layout.setBackgroundResource(R.drawable.dialog_bg4);
         //Изменение фоновой картинки диалога конец
         //начало обработки нажатия кнопок диалога
         TextView button_close2 = dialogEnd.findViewById(R.id.button_close);
