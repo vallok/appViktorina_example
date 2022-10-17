@@ -43,4 +43,26 @@
     <string name="lvl3_19_cow">Теленок</string>
     <string name="lvl3_20_bear">Медведь</string>
     <string name="lvl3_21_staf">Терьер</string>
+
+    <string name="lvl4_1">Огурец</string>
+    <string name="lvl4_2">Мяч</string>
+    <string name="lvl4_3">Тыква</string>
+    <string name="lvl4_4">Подушки</string>
+    <string name="lvl4_5">Груша</string>
+    <string name="lvl4_6">Роутер</string>
+    <string name="lvl4_7">Слива</string>
+    <string name="lvl4_8">Будильник</string>
+    <string name="lvl4_9">Апельсин</string>
+    <string name="lvl4_10">Тенисный мяч</string>
+    <string name="lvl4_11">Горох</string>
+    <string name="lvl4_12">Каска</string>
+    <string name="lvl4_13">Банан</string>
+    <string name="lvl4_14">Цветок</string>
+    <string name="lvl4_15">Яблоко</string>
+    <string name="lvl4_16">Футбольный мяч</string>
+    <string name="lvl4_17">Клубника</string>
+    <string name="lvl4_18">Кофейный аппарат</string>
+    <string name="lvl4_19">Помидоры</string>
+    <string name="lvl4_20">Чашка</string>
+
 </resources>

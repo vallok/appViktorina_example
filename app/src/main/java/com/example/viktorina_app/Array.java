@@ -18,16 +18,16 @@ public class Array {
 
 
     final int[] texts1 = {
-        R.string.lvl1_zero,
-        R.string.lvl1_one,
-        R.string.lvl1_two,
-        R.string.lvl1_three,
-        R.string.lvl1_four,
-        R.string.lvl1_five,
-        R.string.lvl1_six,
-        R.string.lvl1_seven,
-        R.string.lvl1_eight,
-        R.string.lvl1_nine,
+            R.string.lvl1_zero,
+            R.string.lvl1_one,
+            R.string.lvl1_two,
+            R.string.lvl1_three,
+            R.string.lvl1_four,
+            R.string.lvl1_five,
+            R.string.lvl1_six,
+            R.string.lvl1_seven,
+            R.string.lvl1_eight,
+            R.string.lvl1_nine,
 
     };
     // for level1 ends
@@ -74,7 +74,7 @@ public class Array {
 
 
     final int[] texts3 = {
-        R.string.lvl3_1_coala, R.string.lvl3_2_cat, R.string.lvl3_3_pig, R.string.lvl3_4_antilopa,
+            R.string.lvl3_1_coala, R.string.lvl3_2_cat, R.string.lvl3_3_pig, R.string.lvl3_4_antilopa,
             R.string.lvl3_5_monkey, R.string.lvl3_6_funny_rabbit, R.string.lvl3_6_funny_rabbit,
             R.string.lvl3_8_ej, R.string.lvl3_9_fox, R.string.lvl3_10_lion, R.string.lvl3_11_ris,
             R.string.lvl3_12_girafe, R.string.lvl3_13_funny_cat, R.string.lvl3_14_pantera, R.string.lvl3_15_funny_dog,
@@ -82,5 +82,59 @@ public class Array {
             R.string.lvl3_20_bear, R.string.lvl3_21_staf
     };
     //for level3 ends
+
+
+    // for level4 start
+    final int[] images4 = {
+            R.drawable.edible_1,
+            R.drawable.inedible_1,
+            R.drawable.edible_2,
+            R.drawable.inedible_2,
+            R.drawable.edible_3,
+            R.drawable.inedible_3,
+            R.drawable.edible_4,
+            R.drawable.inedible_4,
+            R.drawable.edible_5,
+            R.drawable.inedible_5,
+            R.drawable.edible_6,
+            R.drawable.inedible_6,
+            R.drawable.edible_7,
+            R.drawable.inedible_7,
+            R.drawable.edible_8,
+            R.drawable.inedible_8,
+            R.drawable.edible_9,
+            R.drawable.inedible_9,
+            R.drawable.edible_10,
+            R.drawable.inedible_10
+    };
+
+    final int[] texts4 = {
+            R.string.lvl4_1,
+            R.string.lvl4_2,
+            R.string.lvl4_3,
+            R.string.lvl4_4,
+            R.string.lvl4_5,
+            R.string.lvl4_6,
+            R.string.lvl4_7,
+            R.string.lvl4_8,
+            R.string.lvl4_9,
+            R.string.lvl4_10,
+            R.string.lvl4_11,
+            R.string.lvl4_12,
+            R.string.lvl4_13,
+            R.string.lvl4_14,
+            R.string.lvl4_15,
+            R.string.lvl4_16,
+            R.string.lvl4_17,
+            R.string.lvl4_18,
+            R.string.lvl4_19,
+            R.string.lvl4_20
+
+    };
+
+    final int[] strong4 = {
+            1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0
+    };
+    // for level4 end
 
 }

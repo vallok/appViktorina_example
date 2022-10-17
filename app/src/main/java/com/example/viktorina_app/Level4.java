@@ -186,16 +186,16 @@ public class Level4 extends AppCompatActivity {
         });
 
         // Click on Back button - end
-        numLeft = random.nextInt(21); //get left number
-        image_left.setImageResource(array.images3[numLeft]); // set left image
-        text_left.setText(array.texts3[numLeft]);// set left text
+        numLeft = random.nextInt(20); //get left number
+        image_left.setImageResource(array.images4[numLeft]); // set left image
+        text_left.setText(array.texts4[numLeft]);// set left text
 
-        numRight = random.nextInt(21); // generate right number
-        while(numLeft == numRight){ // start loop with precondition
-            numRight = random.nextInt(21); // generate right number
+        numRight = random.nextInt(20); // generate right number
+        while(array.strong4[numLeft] == array.strong4[numRight]){ // start loop with precondition
+            numRight = random.nextInt(20); // generate right number
         }
-        image_right.setImageResource(array.images3[numRight]); // set right image
-        text_right.setText(array.texts3[numRight]); // set right text
+        image_right.setImageResource(array.images4[numRight]); // set right image
+        text_right.setText(array.texts4[numRight]); // set right text
 
 
         // set on TouchListener for image left
@@ -204,13 +204,13 @@ public class Level4 extends AppCompatActivity {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN){
                     image_right.setEnabled(false); // block the right image
-                    if (numLeft > numRight) {
+                    if (array.strong4[numLeft] > array.strong4[numRight]) {
                         image_left.setImageResource(R.drawable.img_true);
                     }else{
                         image_left.setImageResource(R.drawable.img_false);
                     }
                 }else if (motionEvent.getAction() == MotionEvent.ACTION_UP){
-                    if (numLeft > numRight){
+                    if (array.strong4[numLeft] > array.strong4[numRight]){
                         if (counter < 20) {
                             counter = counter + 1;
                         }
@@ -250,18 +250,17 @@ public class Level4 extends AppCompatActivity {
                         // EXIT FROM LEVEL 2
                         dialogEnd.show();
                     }else{
-                        numLeft = random.nextInt(21); //get left number
-                        image_left.setImageResource(array.images3[numLeft]); // set left image
-                        image_left.startAnimation(a);
-                        text_left.setText(array.texts3[numLeft]);// set left text
+                        // Click on Back button - end
+                        numLeft = random.nextInt(20); //get left number
+                        image_left.setImageResource(array.images4[numLeft]); // set left image
+                        text_left.setText(array.texts4[numLeft]);// set left text
 
-                        numRight = random.nextInt(21); // generate right number
-                        while(numLeft == numRight){ // start loop with precondition
-                            numRight = random.nextInt(21); // generate right number
+                        numRight = random.nextInt(20); // generate right number
+                        while(array.strong4[numLeft] == array.strong4[numRight]){ // start loop with precondition
+                            numRight = random.nextInt(20); // generate right number
                         }
-                        image_right.setImageResource(array.images3[numRight]); // set right image
-                        image_right.startAnimation(a);
-                        text_right.setText(array.texts3[numRight]); // set right text
+                        image_right.setImageResource(array.images4[numRight]); // set right image
+                        text_right.setText(array.texts4[numRight]); // set right text
 
                         image_right.setEnabled(true);
                     }
@@ -278,13 +277,13 @@ public class Level4 extends AppCompatActivity {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN){
                     image_left.setEnabled(false); // block the right image
-                    if (numLeft < numRight) {
+                    if (array.strong4[numLeft] < array.strong4[numRight]) {
                         image_right.setImageResource(R.drawable.img_true);
                     }else{
                         image_right.setImageResource(R.drawable.img_false);
                     }
                 }else if (motionEvent.getAction() == MotionEvent.ACTION_UP){
-                    if (numLeft < numRight){
+                    if (array.strong4[numLeft] < array.strong4[numRight]){
                         if (counter < 20) {
                             counter = counter + 1;
                         }
@@ -324,18 +323,17 @@ public class Level4 extends AppCompatActivity {
                         // EXIT FROM LEVEL 2
                         dialogEnd.show();
                     }else{
-                        numLeft = random.nextInt(21); //get left number
-                        image_left.setImageResource(array.images3[numLeft]); // set left image
-                        image_left.startAnimation(a);
-                        text_left.setText(array.texts3[numLeft]);// set left text
+                        // Click on Back button - end
+                        numLeft = random.nextInt(20); //get left number
+                        image_left.setImageResource(array.images4[numLeft]); // set left image
+                        text_left.setText(array.texts4[numLeft]);// set left text
 
-                        numRight = random.nextInt(21); // generate right number
-                        while(numLeft == numRight){ // start loop with precondition
-                            numRight = random.nextInt(21); // generate right number
+                        numRight = random.nextInt(20); // generate right number
+                        while(array.strong4[numLeft] == array.strong4[numRight]){ // start loop with precondition
+                            numRight = random.nextInt(20); // generate right number
                         }
-                        image_right.setImageResource(array.images3[numRight]); // set right image
-                        image_right.startAnimation(a);
-                        text_right.setText(array.texts3[numRight]); // set right text
+                        image_right.setImageResource(array.images4[numRight]); // set right image
+                        text_right.setText(array.texts4[numRight]); // set right text
 
                         image_left.setEnabled(true);
                     }
