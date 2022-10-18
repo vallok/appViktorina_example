@@ -126,8 +126,8 @@ public class Level4 extends AppCompatActivity {
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false);
         //Изменение фоновой картинки диалога начало
-        LinearLayout layout1 = dialog.findViewById(R.id.dialog_fon);
-        layout.setBackgroundResource(R.drawable.dialog_bg4);
+        LinearLayout layout1 = dialogEnd.findViewById(R.id.dialog_fon);
+        layout1.setBackgroundResource(R.drawable.dialog_bg4);
         //Изменение фоновой картинки диалога конец
         //начало обработки нажатия кнопок диалога
         TextView button_close2 = dialogEnd.findViewById(R.id.button_close);
@@ -153,7 +153,7 @@ public class Level4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    Intent intent = new Intent(Level4.this, Level4.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -164,7 +164,7 @@ public class Level4 extends AppCompatActivity {
         });
 
         TextView textDescriptionEnd = dialogEnd.findViewById(R.id.text_description);
-        textDescriptionEnd.setText(R.string.level_two_end);
+        textDescriptionEnd.setText(R.string.level_four_end);
         // ____________________________________
 
 
