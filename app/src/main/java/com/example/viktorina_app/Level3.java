@@ -3,6 +3,7 @@ package com.example.viktorina_app;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -248,6 +249,15 @@ public class Level3 extends AppCompatActivity {
 
                     if (counter == 20){
                         // EXIT FROM LEVEL 2
+                        SharedPreferences save = getSharedPreferences("SAVE", MODE_PRIVATE);
+                        final int level = save.getInt("LEVEL", 1);
+                        if (level > 3){
+
+                        }else{
+                            SharedPreferences.Editor editor  = save.edit();
+                            editor.putInt("LEVEL", 4);
+                            editor.commit();
+                        }
                         dialogEnd.show();
                     }else{
                         numLeft = random.nextInt(21); //get left number
@@ -322,6 +332,15 @@ public class Level3 extends AppCompatActivity {
 
                     if (counter == 20){
                         // EXIT FROM LEVEL 2
+                        SharedPreferences save = getSharedPreferences("SAVE", MODE_PRIVATE);
+                        final int level = save.getInt("LEVEL", 1);
+                        if (level > 3){
+
+                        }else{
+                            SharedPreferences.Editor editor  = save.edit();
+                            editor.putInt("LEVEL", 4);
+                            editor.commit();
+                        }
                         dialogEnd.show();
                     }else{
                         numLeft = random.nextInt(21); //get left number
