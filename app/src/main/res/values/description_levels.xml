@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="level_one">Выберите большее из двух чисел. \nВопросы могут повторяться, пока вы не наберете 20 очков</string>
-    <string name="level_two">Выберите большее из двух римских чисел. \nВопросы могут повторяться, пока вы не наберете 20 очков</string>
-    <string name="level_one_end">"Поздравляем, уровень пройден. \n
-        А знаете ли Вы, что число 7 считается самым счастливым. Существует 7 дней в неделе, 7 континентов, 7 цветов радуги,
-         7 музыкальных нот, 7 дней мироздания и другие интересные факты.
-        Также число 7 является отдним из самых любимых чисел во всем мире!"</string>
-    <string name="level_two_end">"Поздравляем, уровень пройден. \n
-        А знаете ли Вы, что в римских числах отсутвтвует ноль!"</string>
-    <string name="level_three">Выберите фото где больше виден язык. \n
-        Вопросы могут повторяться, пока вы не наберете 20 очков</string>
-    <string name="level_three_end">"Поздравляем, уровень пройден. \n
-        А знаете ли Вы, что дятел перед тем как ударить по дереву клювом, втягивает свой язык и обворачивает им свой мозг, чтобы предотвратить его травму."</string>
-    <string name="level_four">Выберите фото со сьедобным. \n
-        Вопросы могут повторяться, пока вы не наберете 20 очков</string>
-    <string name="level_four_end">"Поздравляем, уровень пройден. \n
-        А знаете ли Вы, что крокодил глотает камни, не потому что они сьедобны для него, а потому что они помогают ему погружаться на дно!"</string>
-
-
+    <string name="level_one">Choose the larger of the two numbers.\nQuestions can be repeated until you reach 20 points</string>
+    <string name="level_two">Choose the larger of the two Roman numerals.\nQuestions can be repeated until you reach 20 points</string>
+    <string name="level_one_end">"Congratulations, you've completed the level.\n
+         Did you know that the number 7 is considered the luckiest. There are 7 days in a week, 7 continents, 7 colors of the rainbow,
+          7 musical notes, 7 days of the universe and other interesting facts.
+         Also, the number 7 is one of the most beloved numbers in the whole world!"</string>
+    <string name="level_two_end">"Congratulations, you've completed the level.\n
+         Did you know that there is no zero in Roman numerals!"</string>
+    <string name="level_three">Choose a photo where the tongue is more visible. \n
+         Questions can be repeated until you score 20 points</string>
+    <string name="level_three_end">"Congratulations, you've completed the level. \n
+         Did you know that before hitting a tree with its beak, a woodpecker retracts its tongue and wraps it around its brain to prevent injury."</string>
+    <string name="level_four">Select an edible photo. \n
+         Questions can be repeated until you score 20 points"</string>
+    <string name="level_four_end">"Congratulations, you've completed the level. \n
+         Did you know that the crocodile swallows stones, not because they are edible for him,
+         but because they help him sink to the bottom!"</string>
 
 </resources>
