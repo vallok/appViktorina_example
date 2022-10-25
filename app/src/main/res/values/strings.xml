@@ -9,4 +9,7 @@
     <string name="text_continue">Continue</string>
     <string name="level3">Level 3</string>
     <string name="level4">Level 4</string>
+    <string name="text_finish">Congratulation, you\'re finished the game!</string>
+    <string name="button_finish_back">Back to the menu</string>
+
 </resources>

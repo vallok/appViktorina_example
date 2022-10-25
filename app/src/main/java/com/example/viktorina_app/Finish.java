@@ -1,8 +1,5 @@
 package com.example.viktorina_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +7,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
+public class Finish extends AppCompatActivity {
 
     private long timeBackPressed;
     private Toast toast;
@@ -18,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        AppCompatButton button_start = findViewById(R.id.button_back);
+        setContentView(R.layout.finish);
+        AppCompatButton button_start = findViewById(R.id.button_finish_back);
         button_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try{
-                    Intent intent = new Intent(MainActivity.this, GameLevels.class);
+                    Intent intent = new Intent(Finish.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
@@ -41,15 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (timeBackPressed + 2000 > System.currentTimeMillis()){
-            toast.cancel();
+        try{
+            Intent intent = new Intent(Finish.this, GameLevels.class);
+            startActivity(intent);
             finish();
-        }else{
-            toast = Toast.makeText(getBaseContext(), "Кликните еще раз, чтобы выйти", Toast.LENGTH_LONG);
-            toast.show();
+        }catch (Exception e){
+            e.printStackTrace();
         }
-
-            timeBackPressed = System.currentTimeMillis();
 
     }
 

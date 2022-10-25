@@ -9,4 +9,6 @@
     <string name="text_continue">Продолжить</string>
     <string name="level3">Уровень 3</string>
     <string name="level4">Уровень 4</string>
+    <string name="text_finish">Поздравляем, вы прошли игру!</string>
+    <string name="button_finish_back">Вернуться к меню</string>
 </resources>

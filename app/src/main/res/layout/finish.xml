@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
+
+
     <ImageView
         android:id="@+id/main_background"
         android:layout_width="match_parent"
@@ -13,16 +15,30 @@
         android:scaleType="centerCrop"
         android:contentDescription="@string/background_description"
         android:src="@drawable/main_background" />
-
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="130dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/text_finish"
+        android:textAlignment="center"
+        android:textColor="@color/black95"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
     <ImageView
         android:id="@+id/main_boy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/main_img_boy"
-        android:layout_marginTop="100dp"
+        android:src="@drawable/img_finish"
+        android:layout_marginTop="16dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="200dp"
+        android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"/>
 
     <LinearLayout
@@ -34,12 +50,12 @@
         android:padding="20dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_back"
+            android:id="@+id/button_finish_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/button_black95_press_white"
             android:layout_weight="1"
-            android:text="@string/start"
+            android:text="@string/button_finish_back"
             android:textSize="24sp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"

@@ -137,7 +137,7 @@ public class Level4 extends AppCompatActivity {
             public void onClick(View view) {
 //                обработка нажатия кнопки закрытия диалога Начало
                 try{
-                    Intent intent = new Intent(Level4.this, GameLevels.class);// создаем наеменение
+                    Intent intent = new Intent(Level4.this, Finish.class);// создаем наеменение
                     startActivity(intent);// запускаем намерение
                     finish(); //закрываем окноп с уровнем
 
@@ -154,7 +154,7 @@ public class Level4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    Intent intent = new Intent(Level4.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, Finish.class);
                     startActivity(intent);
                     finish();
                 }catch (Exception e){
